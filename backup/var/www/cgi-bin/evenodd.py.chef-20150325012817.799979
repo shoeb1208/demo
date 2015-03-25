@@ -11,7 +11,7 @@ print "Content-type: text/html\n"
 print """<html>
 <body style="background-color:#FBFBEF">
 	<center>
-	<p style="font-family:arial;font-weight:bold;color:Red;font-size:18px">
+	<p style="font-family:arial;font-weight:bold;color:Green;font-size:18px">
 	==Redmart Demo Page==
 	</p>
 	</center><br><br>"""

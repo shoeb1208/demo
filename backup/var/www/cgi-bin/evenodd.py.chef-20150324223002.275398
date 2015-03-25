@@ -1,0 +1,39 @@
+#!/usr/bin/python
+# evenodd.py
+# tells if input integer is even or odd
+
+import sys
+import cgi
+
+form = cgi.FieldStorage( )
+
+#####################
+print "Content-type: text/html\n"
+
+print """<html>
+<body style="background-color:#FBFBEF">
+	<p style="font-family:arial;font-weight:bold;color:Green;font-size:14px">
+	Redmart Demo Page
+	</p>
+</body></html>"""
+
+###Input integer
+print '<FORM METHOD="post" type="hidden" ACTION="/cgi-bin/evenodd.py">'
+print "<table border=2 BORDERCOLOR=BLACK>"
+print "<tr><th BGCOLOR=\"#E3CEF6\" colspan=\"3\"><font color=black>Even Odd Check</font></th></tr>"
+print "<tr><th>Input Integer:</th><th><input type="number" name="number"/></th><th><input type="submit" name="Submit" value="Submit"/></th>"
+print "</table><br></FORM>"
+
+
+if form.has_key('number'):
+number=int(form['number'].value)
+else:
+print "Number not specified"
+sys.exit()
+
+
+if (number % 2 == 0): 
+	print number,"is EVEN" 
+else:
+	print number,"is ODD"
+

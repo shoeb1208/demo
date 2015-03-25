@@ -1,0 +1,9 @@
+language: python
+python:
+  - "2.6"
+# command to install dependencies
+install:
+  - "pip install -r requirements.txt"
+# command to run tests
+script:
+  - python cookbooks/demo/files/default/evenodd.py number=32
